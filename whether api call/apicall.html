@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container"></div>
+
+    
+    <script>
+        const container = document.querySelector('#container');
+
+        const request = new XMLHttpRequest();
+        request.open('GET', 'https://restcountries.eu/rest/v2/name/Nepal');
+        request.send();
+
+        request.addEventListener('load', function () {
+            const [data] = JSON.parse(this.responseText);
+            // console.log(data);    // data of coumtries are in array of object so [data] using remove array.
+            const datahtml = `
+            <div id="card">
+                <div class="card1">
+                    <img src="${data.flag}" alt="given country image">
+                </div>
+                <div class="card2">
+                    <h2>${data.name}</h2>
+                    <h3>capital : ${data.capital}</h3>
+                </div>
+                <hr>
+
+                <div class="card3">
+                    <h3>${data.nativeName}</h3>
+                    <p>Native Language</p>
+                </div>
+                <div class="card3">
+                    <h3>${data.population}</h3>
+                    <p>Population</p>
+                </div>
+                <div class="card3">
+                    <h3>${data.demonym}</h3>
+                    <p>Demonym</p>
+                </div>
+
+            </div>
+            `;
+            container.insertAdjacentHTML('afterbegin', datahtml);
+
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

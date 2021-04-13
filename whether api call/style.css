@@ -1,0 +1,50 @@
+*{
+    /* background-color: black; */
+    position: relative;
+    /* margin: auto; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* margin-top: auto; */
+    /* padding:auto; */
+}
+
+img{
+    margin-top: 8px;
+    height: 100px;
+    width: 100px;
+    /* border: 2px solid black; */
+}
+#card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 100px 0 0 -200px;
+    display: block;
+    text-align: center;
+    background-color: blue;
+    border-radius: 20px;
+    height: 342px;
+    width: 280px;
+    
+}
+#card4{
+    /* position: absolute; */
+    top: 50%;
+    /* left: 50%; */
+    margin: auto;
+    display: block;
+    text-align: center;
+    background-color: blue;
+    border-radius: 5px;
+    height: 342px;
+    width: 374px;
+    
+}
+.card3{
+    /* display: flex; */
+    /* flex-direction: column; */
+    display: inline;
+    float: left;
+    padding: 10px 6px;
+    font-size: 15px;
+}
